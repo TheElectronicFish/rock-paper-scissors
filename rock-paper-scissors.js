@@ -23,10 +23,20 @@
 
 
 
+// function getPlayerChoice() {
+//     let choice = prompt("Enter your answer");
+//     choice = choice.toLowerCase();
+//     return choice;
+// }
+
+// Create an event listener to tell when the player has pressed any of the rps buttons
+// when button is pressed take that button and store it in the player selection variable
+
+const buttons = document.querySelectorAll('.choice');
+buttons
+
 function getPlayerChoice() {
-    let choice = prompt("Enter your answer");
-    choice = choice.toLowerCase();
-    return choice;
+
 }
 
 function getComputerChoice() {
@@ -43,69 +53,69 @@ function playGame() {
 
     if (playerSelection == "rock" && computerSelection == "rock") {
         console.log("Tie. Rock equals rock.");
-        score = 0;
+        score = [0, 0];
         return score;
     }else if (playerSelection == "rock" && computerSelection == "scissors") {
         console.log("You win! Rock beats scissors.");
-        score = 1;
+        score = [1, 0];
         return score;
     }else if (playerSelection == "rock" && computerSelection == "paper") {
         console.log("You lose. Paper beats rock.");
-        score = -1;
+        score = [0, 1];
         return score;
     }else if (playerSelection == "paper" && computerSelection == "rock") {
         console.log("You Win! Paper beats rock.");
-        score = 1;
+        score = [1, 0];
         return score;
     }else if (playerSelection == "paper" && computerSelection == "scissors") {
         console.log("You lose. Scissors beats paper.");
-        score = -1;
+        score = [0, 1];
         return score;
     }else if (playerSelection == "paper" && computerSelection == "paper") {
         console.log("Tie. Paper equals paper.");
-        score = 0;
+        score = [0, 0];
         return score;
     }else if (playerSelection == "scissors" && computerSelection == "rock") {
         console.log("You lose. Rock beats scissors.");
-        score = -1;
+        score = [0, 1];
         return score;
     }else if (playerSelection == "scissors" && computerSelection == "scissors") {
         console.log("Tie. Scissors equals scissors.");
-        score = 0;
+        score = [0, 0];
         return score;
     }else if (playerSelection == "scissors" && computerSelection == "paper") {
         console.log("You win! Scissors beats paper.");
-        score = 1;
+        score = [1, 0];
         return score;
     }else {
         console.log("Please enter rock, paper, or scissors.")};
-        score = 0;
+        score = [0, 0];
         return score;
 
 }
 
-function game() {
+// function game() {
     
-    let result = 0;
+//     let result = 0;
 
-    function playRound() {
-        for (let i = 0; i < 5; i++) {
-            result = +result + playGame();
-        }
-    }
+//     function playRound() {
+//         for (let i = 0; i < 5; i++) {
+//             result = +result + playGame();
+//         }
+//     }
 
-    function winnerLooser() {
-    if (result > 0) {
-        console.log(`WINNER`)
-    }else if (result < 0) {
-        console.log(`LOSER`)
-    }else {
-        console.log(`TIE`)
-    }
-    }
+//     function winnerLooser() {
+//     if (result > 0) {
+//         console.log(`WINNER`)
+//     }else if (result < 0) {
+//         console.log(`LOSER`)
+//     }else {
+//         console.log(`TIE`)
+//     }
+//     }
 
-    playRound();
-    winnerLooser();
-}
+//     playRound();
+//     winnerLooser();
+// }
 
-game();
+// game();

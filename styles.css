@@ -14,8 +14,24 @@ body {
 
 .choice-cont {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 30px;
 
+}
+
+.button-cont {
+    display: flex;
+    gap: 50px;
+}
+
+.score, .player, .comp, .outcome{
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.choice {
+    font-size: 30px;
+    padding: 8px 15px;
 }
