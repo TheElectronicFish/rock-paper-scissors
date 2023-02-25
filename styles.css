@@ -26,7 +26,7 @@ body {
     gap: 50px;
 }
 
-.score, .player, .comp, .outcome{
+.points, .player, .comp, .outcome{
     font-size: 30px;
     font-weight: 400;
 }
