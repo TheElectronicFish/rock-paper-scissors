@@ -46,6 +46,7 @@ let points = document.querySelector('.points');
 let player = document.querySelector('.player');
 let comp = document.querySelector('.comp');
 let outcome = document.querySelector('.outcome');
+let result = document.querySelector('.result');
 
 const buttons = document.querySelectorAll('.choice');
 buttons.forEach((button) => {
@@ -129,8 +130,24 @@ function caluculation (score) {
     playerScore = playerScore + score[0];
     computerScore = computerScore + score[1];
 
-    points.textContent = `Player: ${playerScore} Computer: ${computerScore}`;
+    if (playerScore == 5) {
+        points.textContent = `Player: ${playerScore} Computer: ${computerScore}`;
+        result.textContent = "You beat the computer!";
+        playerScore = 0;
+        computerScore = 0;
+    }else if (computerScore == 5) {
+        points.textContent = `Player: ${playerScore} Computer: ${computerScore}`;
+        result.textContent = "you lose, try again.";
+        playerScore = 0;
+        computerScore = 0;
+    } else {
+        points.textContent = `Player: ${playerScore} Computer: ${computerScore}`;
+        result.textContent = "";
+    };
+
+    // points.textContent = `Player: ${playerScore} Computer: ${computerScore}`;
 }
+
 
 // function game() {
     
